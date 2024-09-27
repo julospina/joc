@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.container {
+    text-align: center;
+    position: relative; /* Para permitir el posicionamiento absoluto de la ventana de links */
+	transform: translateY(-13%); /* Desplazamiento hacia arriba */
+}
+
+/* Video */
+.profile-video {
+    width: 300px; /* Ajusta el tamaño del video */
+    height: auto;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 12px;
+    margin-top: 10px;
+	color: #666666;
+    letter-spacing: 2px; /* Ajusta este valor para aumentar o disminuir el interletrado */
+}
+
+/* Estilo de los links */
+.links {
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+    margin-top: 20px;
+	letter-spacing: 4px;
+	
+}
+
+/* Ventana emergente para los links */
+.link-window {
+ position: absolute; /* Permite que la ventana se superponga sobre otros elementos */
+    top: 400px; /* Ajusta la posición vertical de la ventana debajo de la palabra "links" */
+    left: 50%;
+    transform: translateX(-50%); /* Centra la ventana */
+    width: 200px; /* Fija el ancho de la ventana */
+    padding: 15px; /* Añade un margen interno generoso */
+    font-size: 14px;
+    text-align: left;
+    background-color: white; /* Color de fondo */
+    border: 1px solid white; /* Borde para la ventana */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    border-radius: 8px; /* Esquinas redondeadas */
+    display: none; /* Comienza oculta */
+	
+}
+
+.link-window ul {
+    list-style: none;
+    padding: 0;
+}
+.link-window li a {
+    text-decoration: none;
+    color: black; /* Color inicial de los links */
+    transition: color 0.3s ease; /* Suaviza la transición al cambiar de color */
+}
+
+.link-window li a:hover {
+    color: black; /* Cambia este valor por el color que desees al hacer hover */
+}
+
+.link-window li {
+    margin-bottom: 5px;
+}
+
+.link-window li a {
+    text-decoration: none;
+    color: #666666;
+}

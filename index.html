@@ -8,40 +8,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Selector de idioma -->
+    <div id="language-toggle" class="language-selector">EN</div>
+
     <div class="container">
-        <!-- Video en lugar del GIF -->
+        <!-- Video en lugar del GIF - TU ORIGINAL -->
         <video class="profile-video" autoplay loop muted playsinline>
             <source src="clip.mp4" type="video/mp4">
-            Tu navegador no soporta el formato de video.
+            <span class="video-fallback" data-es="Tu navegador no soporta el formato de video." data-en="Your browser does not support the video format.">Tu navegador no soporta el formato de video.</span>
         </video>
-
-        <!-- Subtítulo -->
-        <p class="subtitle">Artista multimedial. Compilador y montajista de material audiovisual propio, prestado y robado.</p>
-        
-        <!-- Links en lugar de botón -->
-        <p class="links" id="toggle-links">&nbsp; &lt;&lt; links &gt;&gt;&nbsp;</p>
-        
-        <!-- Ventana emergente para los links -->
+        <!-- Subtítulo - TU ORIGINAL + data- -->
+        <p class="subtitle" data-es="Artista multimedial. Compilador y montajista de material audiovisual propio, prestado y robado." data-en="Multimedia artist. Compiler and editor of own, borrowed, and stolen audiovisual material.">Artista multimedial. Compilador y montajista de material audiovisual propio, prestado y robado.</p>
+       
+        <!-- Links en lugar de botón - TU ORIGINAL + data- -->
+        <p class="links" id="toggle-links" data-es="&nbsp; &lt;&lt; links &gt;&gt;&nbsp;" data-en="&nbsp; &lt;&lt; links &gt;&gt;&nbsp;">&nbsp; &lt;&lt; links &gt;&gt;&nbsp;</p>
+       
+        <!-- Ventana emergente para los links - TU ORIGINAL + NUEVO LINK -->
         <div id="linkContainer" class="link-window" style="display: none;">
             <ul>
-                <li><a href="Portfolio JOC.pdf" target="_blank">Portfolio</a></li>
-        <li><a href="https://vimeo.com/julianospina" target="_blank">Vimeo</a></li>
-        <li><a href="https://soundcloud.com/afeast-offriend" target="_blank">SoundCloud</a></li>
-        <li><a href="mailto:julianospina@outlook.com" target="_blank">Contacto</a></li>
+                <li><a href="Es.pdf" target="_blank" data-href-en="En.pdf" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
+                <li><a href="https://vimeo.com/julianospina" target="_blank" data-es="Vimeo" data-en="Vimeo">Vimeo</a></li>
+                <li><a href="https://soundcloud.com/afeast-offriend" target="_blank" data-es="SoundCloud" data-en="SoundCloud">SoundCloud</a></li>
+                <!-- NUEVO LINK -->
+                <li><a href="EsMELN.pdf" target="_blank" data-href-en="EnMELN.pdf" data-es="Memorias en la nube" data-en="Memories in the Cloud">Memorias en la nube</a></li>
+                <li><a href="mailto:julianospina@outlook.com" target="_blank" data-es="Contacto" data-en="Contact">Contacto</a></li>
             </ul>
         </div>
     </div>
-
-    <script>
-        // Mostrar/Ocultar links al hacer clic
-        document.getElementById('toggle-links').addEventListener('click', function() {
-            var linkContainer = document.getElementById('linkContainer');
-            if (linkContainer.style.display === 'none') {
-                linkContainer.style.display = 'block';
-            } else {
-                linkContainer.style.display = 'none';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

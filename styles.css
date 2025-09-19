@@ -21,6 +21,13 @@ body {
     height: auto;
 }
 
+.video-fallback {
+    font-size: 12px;
+    color: #999;
+    display: block;
+    margin-top: 10px;
+}
+
 /* Subtítulo */
 .subtitle {
     font-size: 12px;
@@ -36,7 +43,6 @@ body {
     cursor: pointer;
     margin-top: 20px;
 	letter-spacing: 4px;
-	
 }
 
 /* Ventana emergente para los links */
@@ -54,7 +60,6 @@ body {
     z-index: 10; /* Asegura que esté por encima de otros elementos */
     border-radius: 8px; /* Esquinas redondeadas */
     display: none; /* Comienza oculta */
-	
 }
 
 .link-window ul {
@@ -78,4 +83,24 @@ body {
 .link-window li a {
     text-decoration: none;
     color: #666666;
+}
+
+/* Selector de idioma - SIEMPRE VISIBLE */
+.language-selector {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 12px;
+    color: #666666;
+    cursor: pointer;
+    letter-spacing: 2px;
+    z-index: 20;
+    user-select: none;
+    opacity: 1; /* SIEMPRE VISIBLE */
+    transition: color 0.3s ease; /* Solo transición de color */
+    pointer-events: auto; /* SIEMPRE interactuable */
+}
+
+.language-selector:hover {
+    color: black; /* Cambio a negro igual que el menú */
 }
